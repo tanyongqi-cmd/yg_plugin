@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <el-button @click="operation('dialog')" type="primary">弹框</el-button>
+    <el-button @click="operation('addressChange')" type="primary">地区选择</el-button>
+    <yg-dialog ref="ygDialog" @cancel="cancel"></yg-dialog>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+  },
+  mounted() {
+
+  },
+  methods:{
+    cancel(row){
+      console.log(row)
+    },
+    operation(name){
+      switch (name) {
+        case 'dialog':
+          this.$refs.ygDialog.show('demo','demo',{},{})
+          break;
+        case 'addressChange':
+          break;
+      }
+    }
   }
 }
 </script>
+<style lang="less">
+
+</style>
