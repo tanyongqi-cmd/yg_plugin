@@ -1,8 +1,8 @@
 // 组件全局注册
 import Vue from 'vue'
-import ygdialog from './ygDialog';
-import demo from "@/components/ygDialog/demo";
-Vue.use(ygdialog)
+import demo from "@/components/yg_plugin/ygDialog/demo";
+import yg_plugin from "@/components/yg_plugin"
+Vue.use(yg_plugin)
 const Components=[
     demo
 ]

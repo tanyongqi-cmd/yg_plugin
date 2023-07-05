@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./src/components/ygDialog/index.js --name yg-dialog --dest yg-dialog"
+    "package": "vue-cli-service build --target lib src/components/yg_plugin/index.js --name yg_plugin --dest yg_plugin"
   },
   "dependencies": {
     "core-js": "^3.6.5",
