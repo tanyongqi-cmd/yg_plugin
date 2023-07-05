@@ -1,20 +1,20 @@
 {
   "name": "yg_plugin",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib src/components/yg_plugin/index.js --name yg_plugin --dest yg_plugin"
+    "package": "vue-cli-service build --target lib src/components/yg_plugin/index.js --name yg_plugin --dest dist"
   },
+  "main": "dist/yg_plugin.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0",
-    "yg-dialog": "^0.1.0"
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.11",
