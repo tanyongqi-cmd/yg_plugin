@@ -1,23 +1,28 @@
 <template>
-  <el-dialog :title="name" :width="option.width"
-             :top="option.top" append-to-body destroy-on-close
-             :fullscreen="option.fullscreen"
-             :before-close="close"
-             :visible.sync="dialogFormVisible">
+  <el-drawer :title="name" :visible.sync="dialogFormVisible"
+             :size="option.size"
+             :direction="option.direction"
+             :wrapperClosable="option.wrapperClosable"
+             :withHeader="option.withHeader"
+             append-to-body destroy-on-close
+             :before-close="close">
     <comment ref="commentDialog" :name="type"
              :is="type" @cancel="cancel" :title="name"></comment>
-  </el-dialog>
+  </el-drawer>
 </template>
 <script>
 export default {
-  name: "ygDialog",
+  name: "ygDrawer",
   data() {
     return {
       dialogFormVisible: false,
-      name:'', type:'',
+      name:'',
+      type:'',
       option:{
-        width:'50%',
-        top:'4rem'
+        size:'30%',
+        direction:'rtl',
+        wrapperClosable:true,
+        withHeader:true,
       },
     }
   },
@@ -32,11 +37,12 @@ export default {
      * row=其他入参
      */
     show(title,type,option={
-      width:'50%',
-      top:'4rem'
+      size:'30%',
+      direction:'rtl',
+      wrapperClosable:true,
+      withHeader:true,
     },row){
       const that=this
-      console.log(title,type,option,row)
       this.name=title
       this.type=type
       this.option=option

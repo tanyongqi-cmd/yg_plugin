@@ -1,9 +1,11 @@
 import ygDialog from './ygDialog/ygDialog.vue'
 import ygRegionSelector from './ygRegionSelector/ygRegionSelector'
+import ygDrawer from './ygDrawer/ygDrawer'
 
 const components=[
     ygDialog,
-    ygRegionSelector
+    ygRegionSelector,
+    ygDrawer
 ]
 export default {
     // 核心: Vue.js 的插件应该暴露一个 install 方法。
